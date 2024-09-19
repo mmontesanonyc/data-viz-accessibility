@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Improving web data visualization accessibility</title>
-  </head>
 
-  <body>
-    <style>
-      #contentContainer {
-        max-width: 700px;
-        margin: auto;
-        font-family: Helvetica, Arial, sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Improving web data visualization accessibility</title>
+</head>
 
-      h1, h2 {
-      margin-top: 50px; 
+<body>
+  <style>
+    #contentContainer {
+      max-width: 700px;
+      margin: auto;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    h1,
+    h2 {
+      margin-top: 50px;
     }
 
     p {
@@ -24,57 +26,30 @@
       line-height: 20px;
     }
 
-      /*for toggler buttons */
-      .togglebutton {
-        border-radius: 5px;
-        font-size: 14px;
-        font-weight: 400 !important;
-        background-color: #eeeeee;
-        padding: 7px 20px;
-        color: #696969 !important;
-        box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0, 07);
-        cursor: pointer;
-        display: inline-block;
-        text-align: center;
-        height: 20px !important;
-        text-decoration: none;
-      }
+    .callout-lg {
+      border-left: 8px solid lightgray;
+      padding: 8px;
+      font-size: 18px;
+      background-color: #fbfbfb80;
+      margin: 25px 0px;
+    }
 
-      .togglebutton:hover {
-        background-color: #bce3ff;
-        text-decoration: none;
-      }
+    .callout-sm {
+      border-left: 8px solid lightgray;
+      padding: 5px;
+      font-size: 14px;
+      background-color: #fbfbfb80;
+      margin: 15px 0px;
+    }
 
-      .highlight {
-        background-color: #275e84 !important;
-        color: #ffffff !important;
-        font-weight: 600 !important;
-      }
+    .spacer {
+      margin-top: 50px;
+    }
 
-      .callout-lg {
-        border-left: 8px solid lightgray;
-        padding: 8px;
-        font-size: 18px;
-        background-color: #fbfbfb80;
-        margin: 25px 0px;
-      }
+    .codeblock {
+      border-left: 8px solid lightgray;
 
-      .callout-sm {
-        border-left: 8px solid lightgray;
-        padding: 5px;
-        font-size: 14px;
-        background-color: #fbfbfb80;
-        margin: 15px 0px;
-      }
-
-      .spacer {
-        margin-top: 50px;
-      }
-
-      .codeblock {
-        border-left: 8px solid lightgray;
-
-      background-color:#fbfbfb;
+      background-color: #fbfbfb;
       padding: 8px;
       margin: 25px 0px;
     }
@@ -84,63 +59,87 @@
     }
 
     .screenreader-only {
-      position: absolute; left: -9999px;
+      position: absolute;
+      left: -9999px;
     }
+  </style>
+
+  <!--START-->
+  <div id="contentContainer">
+
+    <h1>Data viz accessbiility can be a challenge. This approach can help. </h1>
+    <p>I often advise people and organizations on ways that they can publish and commuincate their data via the web.
+      Especially for those in government organizations, they ask about accessibility. </p>
+
+    <p>The world of data visualization has for a long time concerned itself especially with colorblind acccessibility.
+      When data viz takes place in a digital realm, it should give equal consideration to screenreader accessibility.
+    </p>
+
+    <p><strong>Summary:</strong>
+    <ul>
+      <li>Properly formatted tables, with labeled headers and rows, offer better access to users with screen readers
+        than charts or graphs do.</li>
+      <li>Combining 'visualiations' optimized for each audience can provide the best experience</li>
+    </ul>
+    </p>
+
+    <h2>Many web visualizations are inaccessible</h2>
+    <p>Visualizations can help sighted users make sense of data, but charts are usually inaccessible to users with
+      screenreaders. Screenreaders are technologies that read the words of a webpage to users who are blind or visually
+      impaired.</p>
+
+    <p>There are more technologies than ever to simply get data visualizations to the web. Those who do should also
+      concern themselves with ensuring that these visualizations are accessible to people with a wide range of abilities
+      and assistive technologies.</p>
 
 
-    </style>
-
-    <!--START-->
-    <div id="contentContainer">
-
-      <h1>Data viz accessbiility can be a challenge. This approach can help. </h1>
-      <p>I often advise people and organizations on ways that they can publish and commuincate their data via the web. Especially for those in government organizations, they ask about accessibility. </p>
-    
-      <p>The world of data visualization has for a long time concerned itself especially with colorblind acccessibility. When data viz takes place in a digital realm, it should give equal consideration to screenreader accessibility. </p>
-
-        <p><strong>Summary:</strong>
-          <ul>
-            <li>Properly formatted tables, with labeled headers and rows, offer better access to users with screen readers than charts or graphs do.</li>
-            <li>Combining 'visualiations' optimized for each audience can provide the best experience</li>
-          </ul>
-        </p>
-
-      <h2>Many web visualizations are inaccessible</h2>
-      <p>Visualizations can help sighted users make sense of data, but charts are usually inaccessible to users with screenreaders. Screenreaders are technologies that read the words of a webpage to users who are blind or visually impaired.</p>
-
-      <p>There are more technologies than ever to simply get data visualizations to the web. Those who do should also concern themselves with ensuring that these visualizations are accessible to people with a wide range of abilities and assistive technologies.</p>
-
-
-      <div class="">
-        <div style="min-height:442px" id="datawrapper-vis-GP4g4"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/GP4g4/embed.js" charset="utf-8" data-target="#datawrapper-vis-GP4g4"></script><noscript><img src="https://datawrapper.dwcdn.net/GP4g4/full.png" alt="A line chart showing quarterly widgets, from January 2021 to April 2024." /></noscript></div>      
+    <div class="">
+      <div style="min-height:442px" id="datawrapper-vis-GP4g4">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/GP4g4/embed.js" charset="utf-8"
+          data-target="#datawrapper-vis-GP4g4"></script><noscript><img
+            src="https://datawrapper.dwcdn.net/GP4g4/full.png"
+            alt="A line chart showing quarterly widgets, from January 2021 to April 2024." /></noscript>
       </div>
+    </div>
 
-        <p>For visualizations from many web visualization technologies, a screenreader will simply read off a list of values, without communicating what series or time period these values are for.</p>
+    <p>For visualizations from many web visualization technologies, a screenreader will simply read off a list of
+      values, without communicating what series or time period these values are for.</p>
 
-        <h2>Increasing accessibility</h2>
-        <p>Common ways to increase the accessibility of visualiations are:
-          <ul>
-            <li>To provide a written description of the data</li>
-            <li>To add alt-text to a visualization</li>
-            <li>To make the data available for download</li>
-          </ul>
-          These are decent, but they do not provide a comparable experience for those who use screenreaders.
-        </p>
+    <h2>Increasing accessibility</h2>
+    <p>Common ways to increase the accessibility of visualiations are:
+    <ul>
+      <li>To provide a written description of the data</li>
+      <li>To add alt-text to a visualization</li>
+      <li>To make the data available for download</li>
+    </ul>
+    These are decent, but they do not provide a comparable experience for those who use screenreaders.
+    </p>
 
-        <p>For example, alt-text on the visualization above might say, "A line chart showing quarterly widgets, from January 2021 to April 2024." One can enhance this to provide every single value, but in many visualizations and systems, it's not feasible to write every value in text.</p>
+    <p>For example, alt-text on the visualization above might say, "A line chart showing quarterly widgets, from January
+      2021 to April 2024." One can enhance this to provide every single value, but in many visualizations and systems,
+      it's not feasible to write every value in text.</p>
 
-        <h2>A better approach: properly-formatted tables</h2>
-        <p>Screenreaders can navigate a properly-formatted HTML table in a way that preserves context: each datapoint essentially has x- and y-coordinates, the row and column labels. A screenreader will read these off to a user, so that the user always knows what a datapoint is for. Here is a table corresponding to the above visualization.</p>
+    <h2>A better approach: properly-formatted tables</h2>
+    <p>Screenreaders can navigate a properly-formatted HTML table in a way that preserves context: each datapoint
+      essentially has x- and y-coordinates, the row and column labels. A screenreader will read these off to a user, so
+      that the user always knows what a datapoint is for. Here is a table corresponding to the above visualization.</p>
 
-        <div>
-          <div style="min-height:621px" id="datawrapper-vis-GSlAl"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/GSlAl/embed.js" charset="utf-8" data-target="#datawrapper-vis-GSlAl"></script><noscript><img src="https://datawrapper.dwcdn.net/GSlAl/full.png" alt="A table showing quarterly widgets, from January 2021 to April 2024." /></noscript></div>
-        </div>
+    <div>
+      <div style="min-height:621px" id="datawrapper-vis-GSlAl">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/GSlAl/embed.js" charset="utf-8"
+          data-target="#datawrapper-vis-GSlAl"></script><noscript><img
+            src="https://datawrapper.dwcdn.net/GSlAl/full.png"
+            alt="A table showing quarterly widgets, from January 2021 to April 2024." /></noscript>
+      </div>
+    </div>
 
-        <h2>Combining experiences</h2>
-        <p>Simple web techniques can offer the optimal version for each user. Below, the visualization's embed code is inside of an element with <span class="code">aria-hidden="true"</span>. This prevents the screenreader from encountering this element and its contents when the screenreader is navigating the webpage.</p>
+    <h2>Combining experiences</h2>
+    <p>Simple web techniques can offer the optimal version for each user. Below, the visualization's embed code is
+      inside of an element with <span class="code">aria-hidden="true"</span>. This prevents the screenreader from
+      encountering this element and its contents when the screenreader is navigating the webpage.</p>
 
-        <div class="codeblock">
-<pre>
+    <div class="codeblock">
+      <pre>
 &lt;div class="visualization" aria-hidden="true"&gt;
 
   &lt;!-- viz embed code --&gt;
@@ -155,12 +154,13 @@
 
 &lt;/div&gt;
         </pre>
-        </div>
+    </div>
 
-        <p>Now, we can add the table to this, outside of the element with the <span class="code">aria-hidden="true"</span> attribute.</p>
+    <p>Now, we can add the table to this, outside of the element with the <span class="code">aria-hidden="true"</span>
+      attribute.</p>
 
-<div class="codeblock">
-  <pre>
+    <div class="codeblock">
+      <pre>
 &lt;div class="visualization" aria-hidden="true"&gt;
   
   &lt;!-- viz embed code --&gt;
@@ -171,14 +171,16 @@
   &lt;!-- Table embed code --&gt;
     ...embed code. 
 </pre>
-</div>
+    </div>
 
 
-<p>This displays both the visualization and the table to sighted users, but only shows the table to users of screenreaders. So the next thing we can do is add CSS that hides the table from sighted users.
-</p>
+    <p>This displays both the visualization and the table to sighted users, but 'hides' the visualization to
+      screenreaders. From the code above, sighted users can see both the visualization and the table; the next thing we
+      can do is add CSS that hides the table from sighted users.
+    </p>
 
-<div class="codeblock">
-  <pre>
+    <div class="codeblock">
+      <pre>
 &lt;div class="visualization" aria-hidden="true"&gt;
 
   &lt;!-- viz embed code --&gt;
@@ -197,38 +199,58 @@
   }
 &lt;/style&gt;
 </pre>
-</div>
+    </div>
 
-<p>Above, the accessible table is within a <span class="code">div</span> with the class <span class="code">screenreader-only</span>. We include CSS (inside the <span class="code">style</span> tags at the bottom) that positions elements with this class far off the screen.</p>
+    <p>Above, the accessible table is within a <span class="code">div</span> with the class <span
+        class="code">screenreader-only</span>. We include CSS (inside the <span class="code">style</span> tags at the
+      bottom) that positions elements with this class far off the screen.</p>
 
-<h2>What does this look like?</h2>
-<p>If you are a sighted user, you'll only see the visualization. If you are visually-impaired or blind and are using a screenreader, you'll only encounter an accessible table.</p>
+    <h2>What does this look like?</h2>
+    <p>If you are a sighted user, you'll only see the visualization. If you are visually-impaired or blind and are using
+      a screenreader, you'll only encounter an accessible table.</p>
 
-<div aria-hidden="true">
-  <div style="min-height:442px" id="datawrapper-vis-GP4g4"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/GP4g4/embed.js" charset="utf-8" data-target="#datawrapper-vis-GP4g4"></script><noscript><img src="https://datawrapper.dwcdn.net/GP4g4/full.png" alt="A line chart showing quarterly widgets, from January 2021 to April 2024." /></noscript></div>  
-</div>
+    <p>While this demo uses embedded <a href="www.datawrapper.de">Datawrapper charts and tables</a> embedded in the page, this approach will work with visualizations from any other platform - including using Javascript or other tools to create in-page HTML data tables.</p>
 
-<div class="screenreader-only">
-  <div style="min-height:621px" id="datawrapper-vis-GSlAl"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/GSlAl/embed.js" charset="utf-8" data-target="#datawrapper-vis-GSlAl"></script><noscript><img src="https://datawrapper.dwcdn.net/GSlAl/full.png" alt="A table showing quarterly widgets, from January 2021 to April 2024." /></noscript></div>
-</div>
+    <div aria-hidden="true">
+      <div style="min-height:442px" id="datawrapper-vis-GP4g4">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/GP4g4/embed.js" charset="utf-8"
+          data-target="#datawrapper-vis-GP4g4"></script><noscript><img
+            src="https://datawrapper.dwcdn.net/GP4g4/full.png"
+            alt="A line chart showing quarterly widgets, from January 2021 to April 2024." /></noscript>
+      </div>
+    </div>
 
-<h2>Why do this?</h2>
-<p>When we create visualizations, we make the insights that data hold more apparent. It stands to reason that our purpose is to remove barriers to the data. Data visualiation has long concerned itself with </p>        
+    <div class="screenreader-only">
+      <div style="min-height:621px" id="datawrapper-vis-GSlAl">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/GSlAl/embed.js" charset="utf-8"
+          data-target="#datawrapper-vis-GSlAl"></script><noscript><img
+            src="https://datawrapper.dwcdn.net/GSlAl/full.png"
+            alt="A table showing quarterly widgets, from January 2021 to April 2024." /></noscript>
+      </div>
+    </div>
 
-<p>The "social model of disability" is a way of understanding 'disabilities' in the context of the world around them, and the extent to which the world around them turns their body into "able" or "disabled" by virtue of the barriers it erects for that body.</p>
-<p>For example, a person who uses a wheelchair is only "disabled" if the world around them is full of stairs instead of ramps. The world renders them disabled by creating inaccessible spaces.
-</p> 
-  
-<p>I invite you to build paths instead of barriers in data visualization.</p>
+    <h2>Why do this?</h2>
+    <p>When we create visualizations, we make the insights that data hold more apparent. It stands to reason that our
+      purpose is to remove barriers to the data. Data visualiation has long concerned itself with </p>
 
-<br><br><br>
+    <p>The "social model of disability" is a way of understanding 'disabilities' in the context of the world around
+      them, and the extent to which the world around them turns their body into "able" or "disabled" by virtue of the
+      barriers it erects for that body.</p>
+    <p>For example, a person who uses a wheelchair is only "disabled" if the world around them is full of stairs instead
+      of ramps. The world renders them disabled by creating inaccessible spaces.
+    </p>
 
-</div>
+    <p>I invite you to build paths instead of barriers in data visualization.</p>
+
+    <br><br><br>
+
+  </div>
 
 
 
 
 
-    <!--END-->
-  </body>
+  <!--END-->
+</body>
+
 </html>
